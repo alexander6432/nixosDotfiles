@@ -1,5 +1,6 @@
 /.gsd-keyboard.settings-ported
 /QtProject.conf
+/lazygit/
 /cava/
 /dconf/
 /environment.d/
@@ -27,3 +28,6 @@
 /user-dirs.locale
 /xsettingsd/
 /noctalia/
+/kitty/current-theme.conf
+/kitty/themes/
+/niri/noctalia.kdl
