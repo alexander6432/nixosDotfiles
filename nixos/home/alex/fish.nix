@@ -10,6 +10,9 @@
         #SUDO HELIX
         shx = "sudo hx -c $HOME/.config/helix/config.toml";
 
+        #RESPALDO
+        respaldo-nixos = "cp -r /etc/nixos/ $HOME/.config/";
+
         # SSH
         ssh-keygen = "ssh-keygen -t ed25519 -C 'alexander6432@gmail.com'";
         ssh-testgithub = "ssh -T git@github.com";
@@ -24,11 +27,11 @@
         nixos-upgrade = "sudo nixos-rebuild switch --flake /etc/nixos --upgrade"; # Actualiza los canales y aplica cambios (actualización completa)
 
         # OPERACIONES DE FLAKES
-        flake-update = "nix flake update /etc/nixos"; # Actualiza el flake.lock (actualiza todas las dependencias del flake)
-        flake-check = "nix flake check /etc/nixos"; # Verifica que el flake sea válido y no tenga errores
-        flake-show = "nix flake show /etc/nixos"; # Muestra los outputs disponibles del flake (paquetes, sistemas, etc.)
-        flake-lock = "nix flake lock /etc/nixos"; # Regenera el flake.lock sin actualizar (útil si se corrompió)
-        flake-metadata = "nix flake metadata /etc/nixos"; # Muestra metadata del flake (descripción, última modificación, inputs)
+        flake-update = "sudo nix flake update --flake /etc/nixos"; # Actualiza el flake.lock (actualiza todas las dependencias del flake)
+        flake-check = "sudo nix flake check --flake /etc/nixos"; # Verifica que el flake sea válido y no tenga errores
+        flake-show = "sudo nix flake show --flake /etc/nixos"; # Muestra los outputs disponibles del flake (paquetes, sistemas, etc.)
+        flake-lock = "sudo nix flake lock --flake /etc/nixos"; # Regenera el flake.lock sin actualizar (útil si se corrompió)
+        flake-metadata = "sudo nix flake metadata --fleke /etc/nixos"; # Muestra metadata del flake (descripción, última modificación, inputs)
 
         # LIMPIEZA Y OPTIMIZACIÓN
         nix-trash = "sudo nix-collect-garbage -d"; # Borra todas las generaciones antiguas excepto la actual (libera mucho espacio)

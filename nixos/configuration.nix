@@ -120,17 +120,6 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
 
-  # noctalia shell
-  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-  cava
-  cliphist
-  libsForQt5.polkit-qt
-  matugen
-  swayidle
-  wlsunset
-  xdg-desktop-portal
-  brightnessctl
-
   # niri
   fzf
   xwayland-satellite
@@ -156,7 +145,21 @@
   loupe
   gnome-calculator
   simple-scan
-  ];
+
+  ] ++ (with pkgs-unstable; [
+
+  # noctalia shell
+  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+  cava
+  cliphist
+  libsForQt5.polkit-qt
+  matugen
+  swayidle
+  wlsunset
+  xdg-desktop-portal
+  brightnessctl
+
+  ]);
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
