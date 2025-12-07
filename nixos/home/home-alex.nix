@@ -3,29 +3,11 @@
 
   home.stateVersion = "25.11";
 
-  imports = [ ];
+  imports = [
+    ./alex/fish.nix
+  ];
 
   programs = {
-    fish = {
-      enable = true;
-      interactiveShellInit = ''
-          set -g fish_greeting ""
-        '';
-      shellAliases = {
-        shx = "sudo hx -c $HOME/.config/helix/config.toml";
-        addkey = "ssh-add ~/.ssh/id_ed25519";
-      };
-      functions = {
-        yy = ''
-          set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        	yazi $argv --cwd-file="$tmp"
-        	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        		builtin cd -- "$cwd"
-        	end
-        	rm -f -- "$tmp"
-          '';
-      };
-    };
     starship = {
       enable = true;
     };
@@ -39,35 +21,27 @@
     git = {
       enable = true;
       settings = {
-        user = {
-          name = "Alexander Gallardo";
-          email = "alexander6432@gmail.com";
-        };
-        init = {
-          defaultBranch = "main";
-        };
-        core = {
-          editor = "hx";
-        };
-        pull = {
-          rebase = false;
-        };
-        push = {
-          autoSetupRemote = true;
-        };
+        user.name = "Alexander Gallardo";
+        user.email = "alexander6432@gmail.com";
+        init.defaultBranch = "main";
+        core.editor = "hx";
+        pull.rebase = false;
+        push.autoSetupRemote = true;
       };
     };
     ssh = {
       enable = true;
       enableDefaultConfig = false;
+      extraConfig = ''
+        AddKeysToAgent yes
+      '';
       matchBlocks = {
-        "github.com" = {
-          user = "git";
-          identityFile = "~/.ssh/id_ed25519";
+        "*" = {
           identitiesOnly = true;
-          extraOptions = {
-            AddKeysToAgent = "yes";
-          };
+        };
+        "github.com" = {
+           user = "git";
+           identityFile = "~/.ssh/id_ed25519";
         };
       };
     };
