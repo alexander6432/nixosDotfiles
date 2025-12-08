@@ -1,0 +1,22 @@
+[config]
+version_check = false
+
+[templates]
+
+# User-defined templates
+# Add your custom templates below
+# Example:
+# [templates.myapp]
+# input_path = "~/.config/noctalia/templates/myapp.css"
+# output_path = "~/.config/myapp/theme.css"
+# post_hook = "myapp --reload-theme"
+
+# Remove this section and add your own templates
+#[templates.placeholder]
+#input_path = "/nix/store/rxy3dkyrj5cp4x07i61b6p6lqsy7g34y-noctalia-shell-2025-12-07_6fc7541/share/noctalia-shell/Assets/MatugenTemplates/noctalia.json"
+#output_path = "/home/alex/.cache/noctalia/placeholder.json"
+
+[templates.niri]
+input_path = "~/.config/noctalia/colorschemes/niri_colors.kdl"
+output_path = "~/.config/niri/niri_colors.kdl"
+post_hook = "pkill -SIGUSR1 kitty"

@@ -1,0 +1,8 @@
+recent-windows {
+
+    highlight {
+        active-color   "{{ colors.primary.default.hex }}"
+        urgent-color   "{{ colors.error.default.hex }}"
+    }
+
+}
