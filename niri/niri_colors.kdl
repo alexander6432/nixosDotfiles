@@ -1,0 +1,8 @@
+recent-windows {
+
+    highlight {
+        active-color   "#ffabee"
+        urgent-color   "#ffb4ab"
+    }
+
+}

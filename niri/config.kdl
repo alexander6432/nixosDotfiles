@@ -27,6 +27,7 @@ layout {
         width 2
         active-gradient from="#004687" to="#00ffd2" angle=45
         inactive-gradient from="#888888" to="#444444" angle=45
+        urgent-gradient from="#930000" to="#ffb4ab" angle=45
     }
 
     border {
@@ -76,71 +77,59 @@ layout {
     background-color "transparent"
 }
 
-  /////////////
- /// INPUT ///
-/////////////
-
-include "./niri/input.kdl"
-
-  ///////////////
- /// OUTPUTS ///
-///////////////
-
-include "./niri/outputs.kdl"
-
-  ////////////////////////
- /// NAMED WORKSPACES ///
-////////////////////////
-
-include "./niri/named_workspaces.kdl"
-
-  /////////////////////
- /// MISCELLANEOUS ///
-/////////////////////
-
-include "./niri/miscellaneous.kdl"
-
-  //////////////////
- /// ANIMATIONS ///
-//////////////////
-
-include "./niri/animations.kdl"
-
-  ////////////////
- /// GESTURES ///
-////////////////
-
-include "./niri/gestures.kdl"
-
-  ////////////////////
- /// WINDOW RULES ///
-////////////////////
-
-include "./niri/window_rules.kdl"
-
-  ///////////////////
- /// LAYER RULES ///
-///////////////////
-
-include "./niri/layer_rules.kdl"
-
-  /////////////////////
- /// DEBUG OPTIONS ///
-/////////////////////
-
-include "./niri/debug_options.kdl"
-
-  //////////////
- /// BLINDS ///
-//////////////
-
-include "./niri/blinds.kdl"
-
   //////////////////////
  /// RECENT WINDOWS ///
 //////////////////////
 
-include "./niri/recent_windows.kdl"
+recent-windows {
+
+    // off
+    debounce-ms 1000
+    open-delay-ms 100
+
+    highlight {
+        active-color "#00ffffff"
+        urgent-color "#ffb4abff"
+        padding 16
+        corner-radius 8
+    }
+
+    previews {
+        max-height 516
+        max-scale 0.5
+    }
+
+}
+
+  ///////////////
+ /// INCLUDE ///
+///////////////
+
+include "./niri/input.kdl"
+
+include "./niri/outputs.kdl"
+
+include "./niri/named_workspaces.kdl"
+
+include "./niri/miscellaneous.kdl"
+
+include "./niri/animations.kdl"
+
+include "./niri/gestures.kdl"
+
+include "./niri/window_rules.kdl"
+
+include "./niri/layer_rules.kdl"
+
+include "./niri/debug_options.kdl"
+
+include "./niri/blinds.kdl"
+
+  ///////////////////
+ /// NIRI COLORS ///
+///////////////////
+
+include "./niri_colors.kdl"
 
   ////////////////
  /// NOCTALIA ///

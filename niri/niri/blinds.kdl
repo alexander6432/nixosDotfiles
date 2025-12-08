@@ -138,3 +138,18 @@ binds {
     Ctrl+Print  hotkey-overlay-title="Capturar por Seleccion" { screenshot; }
 
 }
+
+  //////////////////////
+ /// RECENT WINDOWS ///
+//////////////////////
+
+recent-windows {
+
+    binds {
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+U00BA       { next-window     filter="app-id"; }
+        Mod+Shift+U00BA { previous-window filter="app-id"; }
+    }
+
+}
