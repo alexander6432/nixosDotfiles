@@ -147,9 +147,10 @@
   simple-scan
   nautilus
   file-roller
+  decibels
 
   # utilidades
-  pywalfox-native
+  git
   rar
   unrar
   p7zip

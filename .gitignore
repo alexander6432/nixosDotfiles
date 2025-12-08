@@ -1,6 +1,5 @@
 /.gsd-keyboard.settings-ported
 /QtProject.conf
-/lazygit/
 /cava/
 /dconf/
 /environment.d/
@@ -13,10 +12,19 @@
 /gtk-3.0/
 /gtk-4.0/
 /htop/
+/kitty/current-theme.conf
+/kitty/themes/
 /kritadisplayrc
 /kritarc
+/lazygit/
 /libreoffice/
 /mimeapps.list
+/niri/niri_colors.kdl
+
+/niri/noctalia.kdl
+/noctalia/colors.json
+/noctalia/plugins.json
+/noctalia/plugins/
 /nwg-look/
 /pulse/
 /qt5ct/
@@ -27,10 +35,3 @@
 /user-dirs.dirs
 /user-dirs.locale
 /xsettingsd/
-/noctalia/plugins/
-/noctalia/colors.json
-/noctalia/plugins.json
-/kitty/current-theme.conf
-/kitty/themes/
-/niri/noctalia.kdl
-/niri/niri_colors.kdl
