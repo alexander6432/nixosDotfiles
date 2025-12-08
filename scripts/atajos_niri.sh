@@ -1,6 +1,6 @@
 #!/run/current-system/sw/bin/bash
 # ~/.local/bin/niri-keys-search
-grep 'hotkey-overlay-title' ~/.config/niri/config.kdl | \
+grep 'hotkey-overlay-title' ~/.config/niri/niri/blinds.kdl | \
     sed 's/^\s*//' | \
     sed 's/hotkey-overlay-title=//g' | \
     sed 's/"//g' | \

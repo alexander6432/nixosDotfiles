@@ -74,7 +74,6 @@
   ffmpeg
   imagemagick
   jq
-  p7zip
   poppler
   resvg
   ripgrep

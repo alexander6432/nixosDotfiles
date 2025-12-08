@@ -145,6 +145,16 @@
   loupe
   gnome-calculator
   simple-scan
+  nautilus
+  file-roller
+
+  # utilidades
+  pywalfox-native
+  rar
+  unrar
+  p7zip
+  zip
+  unzip
 
   ] ++ (with pkgs-unstable; [
 
@@ -164,7 +174,12 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
+    noto-fonts
+    noto-fonts-color-emoji
+    noto-fonts-emoji-blob-bin
+    noto-fonts-monochrome-emoji
   ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
