@@ -25,6 +25,7 @@
         nixos-dry = "sudo nixos-rebuild dry-build --flake /etc/nixos"; # Muestra qué se construirá sin construir realmente (simulación)
         nixos-rollback = "sudo nixos-rebuild switch --rollback"; # Vuelve a la generación anterior inmediatamente
         nixos-upgrade = "sudo nixos-rebuild switch --flake /etc/nixos --upgrade"; # Actualiza los canales y aplica cambios (actualización completa)
+        nixos-gendel = "sudo nixos-delete-gen +5"; # Mantiene solo las últimas 5 generaciones del sistema
 
         # OPERACIONES DE FLAKES
         flake-update = "sudo nix flake update --flake /etc/nixos"; # Actualiza el flake.lock (actualiza todas las dependencias del flake)
@@ -37,7 +38,6 @@
         nix-trash = "sudo nix-collect-garbage -d"; # Borra todas las generaciones antiguas excepto la actual (libera mucho espacio)
         nix-optimize = "sudo nix-store --optimize"; # Optimiza el store creando hardlinks de archivos duplicados (ahorra espacio)
         nix-clean = "sudo nix-collect-garbage --delete-older-than 30d && sudo nix-store --optimize"; # Limpieza completa: borra generaciones de 30+ días y optimiza
-        nix-genclean = "sudo nix-env --delete-generations +5 --profile /nix/var/nix/profiles/system"; # Mantiene solo las últimas 5 generaciones del sistema
         nix-oldclean = "sudo nix-collect-garbage --delete-older-than 7d"; # Borra generaciones de más de 7 días (limpieza más agresiva)
 
         # INFORMACIÓN DE GENERACIONES
