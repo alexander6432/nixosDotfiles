@@ -28,7 +28,7 @@
 
         # OPERACIONES DE FLAKES
         flake-update = "sudo nix flake update --flake /etc/nixos"; # Actualiza el flake.lock (actualiza todas las dependencias del flake)
-        flake-check = "sudo nix flake check --flake /etc/nixos"; # Verifica que el flake sea válido y no tenga errores
+        flake-check = "sudo nix flake check /etc/nixos"; # Verifica que el flake sea válido y no tenga errores
         flake-show = "sudo nix flake show --flake /etc/nixos"; # Muestra los outputs disponibles del flake (paquetes, sistemas, etc.)
         flake-lock = "sudo nix flake lock --flake /etc/nixos"; # Regenera el flake.lock sin actualizar (útil si se corrompió)
         flake-metadata = "sudo nix flake metadata --fleke /etc/nixos"; # Muestra metadata del flake (descripción, última modificación, inputs)

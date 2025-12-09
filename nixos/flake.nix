@@ -41,6 +41,10 @@
             users.alex = ./home/home-alex.nix;
             extraSpecialArgs = {
               inherit inputs;
+               pkgs-unstable = import nixpkgs-unstable {
+                 system = "x86_64-linux";
+                 config.allowUnfree = true;
+              };
             };
             backupFileExtension = "backup";
           };

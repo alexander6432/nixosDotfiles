@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 {
 
   home.stateVersion = "25.11";
@@ -50,6 +50,7 @@
   services.ssh-agent.enable = true;
 
   home.packages = with pkgs; [
+
   # terminal
   bat
   fastfetch
@@ -57,6 +58,20 @@
   lazygit
   tree
   wl-clipboard
+
+  # yazi
+  fd
+  ffmpeg
+  imagemagick
+  jq
+  poppler
+  resvg
+  ripgrep
+  trash-cli
+
+  # apps
+
+  ] ++ (with pkgs-unstable; [
 
   # helix
   helix
@@ -69,17 +84,5 @@
   tombi
   vscode-json-languageserver
 
-  # yazi
-  fd
-  ffmpeg
-  imagemagick
-  jq
-  poppler
-  resvg
-  ripgrep
-  trash-cli
-  zoxide
-
-  # apps
-  ];
+  ]);
 }

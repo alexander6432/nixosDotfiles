@@ -241,7 +241,7 @@
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
-        "animationDisabled": false,
+        "animationDisabled": true,
         "animationSpeed": 1,
         "avatarImage": "/home/alex/Imágenes/IMG_20220923_105006.jpg",
         "boxRadiusRatio": 1,
@@ -259,7 +259,8 @@
         "shadowOffsetX": 2,
         "shadowOffsetY": 3,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": false
+        "showScreenCorners": false,
+        "showSessionButtonsOnLockScreen": true
     },
     "hooks": {
         "darkModeChange": "",
@@ -415,7 +416,7 @@
         "kcolorscheme": true,
         "kitty": true,
         "niri": true,
-        "pywalfox": true,
+        "pywalfox": false,
         "qt": true,
         "spicetify": false,
         "telegram": true,

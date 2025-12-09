@@ -61,6 +61,11 @@
   services = {
     printing.enable = true;
     printing.drivers = with pkgs; [ hplip];
+    avahi = {
+      enable = true;
+      nssmdns4 = true; # Importante para resolver nombres .local
+      openFirewall = true;
+    };
   };
 
   # Enable sound with pipewire.
