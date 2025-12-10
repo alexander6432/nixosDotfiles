@@ -110,6 +110,9 @@
   programs = {
     firefox.enable = true;
     fish.enable = true;
+    vscode = {
+      enable = true;
+    };
     niri = {
       enable = true;
       package = pkgs-unstable.niri;

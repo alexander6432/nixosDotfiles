@@ -25,7 +25,7 @@
         nixos-dry = "sudo nixos-rebuild dry-build --flake /etc/nixos"; # Muestra qué se construirá sin construir realmente (simulación)
         nixos-rollback = "sudo nixos-rebuild switch --rollback"; # Vuelve a la generación anterior inmediatamente
         nixos-upgrade = "sudo nixos-rebuild switch --flake /etc/nixos --upgrade"; # Actualiza los canales y aplica cambios (actualización completa)
-        nixos-gendel = "sudo nixos-delete-gen +5"; # Mantiene solo las últimas 5 generaciones del sistema
+        nixos-gendel = "nixos-delete-gen +5"; # Mantiene solo las últimas 5 generaciones del sistema
 
         # OPERACIONES DE FLAKES
         flake-update = "sudo nix flake update --flake /etc/nixos"; # Actualiza el flake.lock (actualiza todas las dependencias del flake)

@@ -1,6 +1,7 @@
 /.gsd-keyboard.settings-ported
 /QtProject.conf
 /cava/
+/Code/
 /dconf/
 /environment.d/
 /evolution/
@@ -20,7 +21,6 @@
 /libreoffice/
 /mimeapps.list
 /niri/niri_colors.kdl
-
 /niri/noctalia.kdl
 /noctalia/colors.json
 /noctalia/plugins.json
