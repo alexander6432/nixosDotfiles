@@ -7,6 +7,8 @@
     ./alex/fish.nix
   ];
 
+  services.polkit-gnome.enable = true;
+
   programs = {
     starship = {
       enable = true;
@@ -70,6 +72,8 @@
   trash-cli
 
   # apps
+  gnome-disk-utility
+  ventoy-full-gtk
 
   ] ++ (with pkgs-unstable; [
 

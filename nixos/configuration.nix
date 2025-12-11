@@ -94,6 +94,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  security.polkit.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alex = {
     isNormalUser = true;
@@ -128,6 +130,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "ventoy-gtk3-1.1.07"
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -153,6 +158,17 @@
   gimp
   darktable
   libsForQt5.xp-pen-deco-01-v2-driver
+
+  #ortografia libreoffice
+  hunspell
+  hunspellDicts.es-mx
+  hunspellDicts.es-any
+  hunspellDicts.en-us
+  hunspellDicts.en-us-large
+  hyphen
+  hyphenDicts.en-us
+  mythes
+  languagetool
 
   # gnome
   showtime
