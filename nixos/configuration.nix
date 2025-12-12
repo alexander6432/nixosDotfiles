@@ -17,6 +17,18 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
+  # Cargar el módulo v4l2loopback
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+
+  boot.extraModprobeConfig = ''
+  options v4l2loopback devices=2 video_nr=1,2 card_label="CamExt, ObsCam" exclusive_caps=1
+'';
+
+  # Cargar automáticamente al inicio
+  boot.kernelModules = [ "v4l2loopback" ];
+
   zramSwap = {
     enable = true;
     memoryPercent = 50;

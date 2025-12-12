@@ -47,6 +47,17 @@
         };
       };
     };
+    obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-move-transition
+        obs-pipewire-audio-capture
+        obs-shaderfilter
+        obs-composite-blur
+      ];
+    };
   };
 
   services.ssh-agent.enable = true;
@@ -73,7 +84,11 @@
 
   # apps
   gnome-disk-utility
+  microsoft-edge
+  zoom-us
   ventoy-full-gtk
+  webex
+  droidcam
 
   ] ++ (with pkgs-unstable; [
 

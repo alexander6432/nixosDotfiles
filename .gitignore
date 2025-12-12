@@ -3,6 +3,7 @@
 /QtProject.conf
 /cava/
 /dconf/
+/droidcam
 /environment.d/
 /evolution/
 /fish/
@@ -19,6 +20,7 @@
 /kritarc
 /lazygit/
 /libreoffice/
+/microsoft-edge/
 /mimeapps.list
 /niri/niri_colors.kdl
 /niri/noctalia.kdl
@@ -27,6 +29,8 @@
 /noctalia/plugins/
 /noctalia/settings.json
 /nwg-look/
+/obs-studio/
+
 /pulse/
 /qt5ct/
 /qt6ct/
@@ -36,3 +40,5 @@
 /user-dirs.dirs
 /user-dirs.locale
 /xsettingsd/
+/zoom.conf
+/zoomus.conf
