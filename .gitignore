@@ -4,6 +4,7 @@
 /cava/
 /dconf/
 /droidcam
+/enchant/
 /environment.d/
 /evolution/
 /fish/
@@ -30,7 +31,6 @@
 /noctalia/settings.json
 /nwg-look/
 /obs-studio/
-
 /pulse/
 /qt5ct/
 /qt6ct/

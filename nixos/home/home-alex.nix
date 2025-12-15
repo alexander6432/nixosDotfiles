@@ -58,6 +58,10 @@
         obs-composite-blur
       ];
     };
+    vscode = {
+      enable = true;
+      package = pkgs.vscode;
+    };
   };
 
   services.ssh-agent.enable = true;
