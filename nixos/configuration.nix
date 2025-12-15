@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, pkgs-unstable, ... }:
+{ inputs, config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -108,6 +108,25 @@
   # services.xserver.libinput.enable = true;
 
   security.polkit.enable = true;
+
+  # noctalia
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+  hardware.bluetooth.enable = true;
+  services.gnome.evolution-data-server.enable = true;
+  environment.sessionVariables = {
+     GI_TYPELIB_PATH = lib.makeSearchPath "lib/girepository-1.0" (
+      with pkgs;
+      [
+        evolution-data-server
+        libical
+        glib.out
+        libsoup_3
+        json-glib
+        gobject-introspection
+      ]
+    );
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alex = {

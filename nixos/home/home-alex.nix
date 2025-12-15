@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 {
 
   home.stateVersion = "25.11";

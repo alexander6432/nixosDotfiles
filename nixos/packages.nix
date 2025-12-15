@@ -27,9 +27,8 @@
   # niri
   fzf
   xwayland-satellite
-  kdePackages.qt6ct
-  nwg-look
-  adw-gtk3
+  swayidle
+  brightnessctl
 
   # apps
   firefox
@@ -64,6 +63,7 @@
   file-roller
   decibels
   gnome-text-editor
+  gnome-calendar
 
   # utilidades
   git
@@ -79,12 +79,16 @@
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   cava
   cliphist
-  libsForQt5.polkit-qt
+  kdePackages.polkit-kde-agent-1
   matugen
-  swayidle
   wlsunset
   xdg-desktop-portal
-  brightnessctl
+
+  kdePackages.qt6ct
+  nwg-look
+  adw-gtk3
+
+  (python3.withPackages (pyPkgs: with pyPkgs; [ pygobject3 ]))
 
   ]);
 
