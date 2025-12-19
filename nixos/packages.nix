@@ -3,6 +3,20 @@
 
   # Install firefox.
   programs = {
+     nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        gtk3
+        pango
+        cairo
+        harfbuzz
+        atk
+        gdk-pixbuf
+        glib
+        libepoxy
+        fontconfig
+      ];
+    };
     firefox.enable = true;
     fish.enable = true;
     niri = {
@@ -66,6 +80,8 @@
   gnome-calendar
 
   # utilidades
+  curl
+  wget
   git
   rar
   unrar

@@ -101,11 +101,12 @@
   bash-language-server
   fish-lsp
   kdlfmt
-  nil
   nixd
   taplo
   tombi
   vscode-json-languageserver
+  ruff
+  python313Packages.python-lsp-server
 
   ]);
 }
