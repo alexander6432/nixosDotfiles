@@ -4,7 +4,6 @@
   home.stateVersion = "25.11";
 
   imports = [
-    ./alex/fish.nix
   ];
 
   services.polkit-gnome.enable = true;

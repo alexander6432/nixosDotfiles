@@ -93,6 +93,7 @@
 
   # noctalia shell
   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+  # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { calendarSupport = true; }
   cava
   cliphist
   kdePackages.polkit-kde-agent-1
