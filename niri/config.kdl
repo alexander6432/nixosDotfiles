@@ -125,12 +125,6 @@ include "./niri/debug_options.kdl"
 
 include "./niri/blinds.kdl"
 
-  ///////////////////
- /// NIRI COLORS ///
-///////////////////
-
-include "./niri_colors.kdl"
-
   ////////////////
  /// NOCTALIA ///
 ////////////////
