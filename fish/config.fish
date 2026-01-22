@@ -48,7 +48,7 @@ alias nixos-upgrade="sudo nixos-rebuild switch --flake /etc/nixos --upgrade"
 # OPERACIONES DE FLAKES
 # =========================
 
-alias flake-update="sudo nix flake update /etc/nixos"
+alias flake-update="sudo nix flake update --flake /etc/nixos --option connect-timeout 300"
 alias flake-check="sudo nix flake check /etc/nixos"
 alias flake-show="sudo nix flake show /etc/nixos"
 alias flake-lock="sudo nix flake lock /etc/nixos"

@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 {
 
   # Install firefox.
@@ -48,7 +48,6 @@
   firefox
   google-chrome
   kitty
-  libreoffice-fresh
   telegram-desktop
   inkscape
   krita
@@ -57,6 +56,7 @@
   libsForQt5.xp-pen-deco-01-v2-driver
 
   #ortografia libreoffice
+  libreoffice-fresh
   hunspell
   hunspellDicts.es-mx
   hunspellDicts.es-any
@@ -92,8 +92,7 @@
   ] ++ (with pkgs-unstable; [
 
   # noctalia shell
-  inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-  # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override { calendarSupport = true; }
+  (noctalia-shell.override { calendarSupport = true; })
   cava
   cliphist
   kdePackages.polkit-kde-agent-1

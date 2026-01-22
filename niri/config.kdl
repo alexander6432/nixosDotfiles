@@ -17,9 +17,10 @@ layout {
     default-column-width {}
 
     preset-window-heights {
-        proportion 0.33
+        proportion 0.25
         proportion 0.49
-        proportion 0.66
+        proportion 0.74
+        proportion 1.00
     }
 
     focus-ring {
