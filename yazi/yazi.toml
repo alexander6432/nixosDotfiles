@@ -50,10 +50,10 @@ LibreOffice = [
 	{ run = 'libreoffice "$@"', orphan = true, desc = "LibreOffice", for = "linux" },
 ]
 Pdf = [
-	{ run = 'evince "$@"', orphan = true, desc = "Visor de Pdf", for = "linux" },
+	{ run = 'papers "$@"', orphan = true, desc = "Visor de Pdf", for = "linux" },
 ]
 Reproducir = [
-	{ run = 'totem "$@"', orphan = true, desc = "Reproductor", for = "linux" },
+	{ run = 'showtime "$@"', orphan = true, desc = "Reproductor", for = "linux" },
 ]
 
 [open]

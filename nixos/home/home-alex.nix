@@ -57,10 +57,6 @@
         obs-composite-blur
       ];
     };
-    vscode = {
-      enable = true;
-      package = pkgs.vscode;
-    };
   };
 
   services.ssh-agent.enable = true;
@@ -87,7 +83,6 @@
 
   # apps
   gnome-disk-utility
-  microsoft-edge
   zoom-us
   ventoy-full-gtk
   webex
@@ -104,8 +99,9 @@
   taplo
   tombi
   vscode-json-languageserver
-  ruff
-  python313Packages.python-lsp-server
+
+  # otros
+  sqlite
 
   ]);
 }

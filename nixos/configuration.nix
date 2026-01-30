@@ -109,6 +109,10 @@
 
   security.polkit.enable = true;
 
+  services.flatpak.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.config.common.default = "gtk";
+
   # noctalia
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;

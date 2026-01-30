@@ -3,20 +3,20 @@
 
   # Install firefox.
   programs = {
-     nix-ld = {
-      enable = true;
-      libraries = with pkgs; [
-        gtk3
-        pango
-        cairo
-        harfbuzz
-        atk
-        gdk-pixbuf
-        glib
-        libepoxy
-        fontconfig
-      ];
-    };
+    #  nix-ld = {
+    #   enable = true;
+    #   libraries = with pkgs; [
+    #     gtk3
+    #     pango
+    #     cairo
+    #     harfbuzz
+    #     atk
+    #     gdk-pixbuf
+    #     glib
+    #     libepoxy
+    #     fontconfig
+    #   ];
+    # };
     firefox.enable = true;
     fish.enable = true;
     niri = {
@@ -55,18 +55,6 @@
   darktable
   libsForQt5.xp-pen-deco-01-v2-driver
 
-  #ortografia libreoffice
-  libreoffice-fresh
-  hunspell
-  hunspellDicts.es-mx
-  hunspellDicts.es-any
-  hunspellDicts.en-us
-  hunspellDicts.en-us-large
-  hyphen
-  hyphenDicts.en-us
-  mythes
-  languagetool
-
   # gnome
   showtime
   papers
@@ -103,8 +91,6 @@
   kdePackages.qt6ct
   nwg-look
   adw-gtk3
-
-  (python3.withPackages (pyPkgs: with pyPkgs; [ pygobject3 ]))
 
   ]);
 
